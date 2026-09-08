@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OpenWrt for Alcatel LINKHUB HH71VM | HH71VM Project</title>
+    <meta
+      name="description"
+      content="OpenWrt for the Alcatel LINKHUB HH71VM, a community OpenWrt port for the Realtek subsystem with RTL8197FS and RTL8812FE Wi-Fi, modem integration, and flash installation guidance."
+    >
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://sowarden.github.io/">
+    <meta property="og:title" content="OpenWrt for Alcatel LINKHUB HH71VM">
+    <meta
+      property="og:description"
+      content="OpenWrt port for the Realtek subsystem of the Alcatel LINKHUB HH71VM, with flash installation, firmware downloads, and source documentation."
+    >
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sowarden.github.io/">
+    <meta property="og:site_name" content="HH71VM Project">
+    <meta property="og:image" content="https://sowarden.github.io/assets/og-image.svg">
+    <meta property="og:image:alt" content="HH71VM Project OpenWrt for Alcatel LINKHUB HH71VM">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="OpenWrt for Alcatel LINKHUB HH71VM | HH71VM Project">
+    <meta
+      name="twitter:description"
+      content="OpenWrt for the Alcatel LINKHUB HH71VM with flash installation, release downloads, and source/build documentation."
+    >
+    <meta name="twitter:image" content="https://sowarden.github.io/assets/og-image.svg">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="apple-touch-icon" href="assets/favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Verification tags for Google Search Console, Bing Webmaster Tools, and similar services can be added here. -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "url": "https://sowarden.github.io/",
+          "name": "HH71VM Project",
+          "alternateName": "HH71VM OpenWrt",
+          "description": "Open source OpenWrt port for the Alcatel LINKHUB HH71VM.",
+          "inLanguage": "en"
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "name": "HH71VM OpenWrt",
+          "description": "OpenWrt port for the Realtek subsystem of the Alcatel LINKHUB HH71VM, including firmware, build configuration, and installation tools.",
+          "url": "https://github.com/sowarden/hh71vm-openwrt",
+          "codeRepository": "https://github.com/sowarden/hh71vm-openwrt",
+          "license": "https://github.com/sowarden/hh71vm-openwrt/blob/main/LICENSE",
+          "programmingLanguage": [
+            "C",
+            "Shell",
+            "Python"
+          ]
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="HH71VM Project home">HH71VM Project</a>
+        <nav class="site-nav" aria-label="Main navigation">
+          <a href="#overview">Overview</a>
+          <a href="#status">Features / Status</a>
+          <a href="#install">Installation</a>
+          <a href="#docs">Documentation</a>
+          <a href="#project">GitHub</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">OpenWrt community port</p>
+            <h1>OpenWrt for Alcatel LINKHUB HH71VM</h1>
+            <p class="lede">
+              This project publishes an OpenWrt port for the Realtek subsystem of the Alcatel
+              LINKHUB HH71VM, running on the router’s <strong>RTL8197FS</strong> and
+              <strong>RTL8812FE</strong> hardware with a permanent flash install path and public
+              source documentation.
+            </p>
+            <div class="cta-row">
+              <a class="button primary" href="https://github.com/sowarden/hh71vm-openwrt" target="_blank" rel="noreferrer">View project on GitHub</a>
+              <a class="button secondary" href="https://github.com/sowarden/hh71vm-openwrt/releases/latest/download/hh71vm-openwrt-flash-bundle.zip" target="_blank" rel="noreferrer">Download latest release</a>
+            </div>
+          </div>
+          <aside class="hero-panel" aria-label="Project summary card">
+            <dl>
+              <div>
+                <dt>Target</dt>
+                <dd>Alcatel LINKHUB HH71VM</dd>
+              </div>
+              <div>
+                <dt>Realtek side</dt>
+                <dd>RTL8197FS + RTL8812FE</dd>
+              </div>
+              <div>
+                <dt>Install type</dt>
+                <dd>Permanent flash install</dd>
+              </div>
+              <div>
+                <dt>Project</dt>
+                <dd><a href="https://github.com/sowarden/hh71vm-openwrt" target="_blank" rel="noreferrer">sowarden/hh71vm-openwrt</a></dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+      </section>
+
+      <section id="overview" class="section">
+        <div class="container narrow">
+          <div class="section-header">
+            <p class="eyebrow">What is this?</p>
+            <h2>OpenWrt on the Realtek side of the HH71VM</h2>
+          </div>
+          <p>
+            The HH71VM is an Alcatel LINKHUB router with a separate Realtek side and a Qualcomm
+            modem side. This project replaces the stock Realtek firmware with an OpenWrt port for
+            that Realtek subsystem while preserving the separate Qualcomm modem stack and its
+            mobile-data functions.
+          </p>
+          <p>
+            The supported deployment is a permanent installation into the Realtek SPI flash. The
+            router boots OpenWrt on its own and keeps its settings across power cycles. Loading a
+            build into RAM remains available as an optional dry run for testing or UART-based
+            evaluation, but permanent flash installation is the normal path for use.
+          </p>
+        </div>
+      </section>
+
+      <section id="status" class="section section-alt">
+        <div class="container">
+          <div class="section-header">
+            <p class="eyebrow">Current status</p>
+            <h2>What works on the reference HH71VM</h2>
+          </div>
+          <div class="feature-grid">
+            <article class="feature-item">
+              <h3>OpenWrt boots from flash</h3>
+              <p>Supported installation path writes the kernel and root filesystem into the Realtek flash.</p>
+            </article>
+            <article class="feature-item">
+              <h3>Ethernet</h3>
+              <p>Ethernet and the external gigabit PHY are working on the reference hardware.</p>
+            </article>
+            <article class="feature-item">
+              <h3>2.4 GHz Wi‑Fi</h3>
+              <p>RTL8197FS networking is working through the OpenWrt netifd/UCI integration.</p>
+            </article>
+            <article class="feature-item">
+              <h3>5 GHz Wi‑Fi</h3>
+              <p>RTL8812FE is working on the reference device in the current build.</p>
+            </article>
+            <article class="feature-item">
+              <h3>Mobile Internet</h3>
+              <p>Qualcomm USB mux and RNDIS WAN support are part of the working setup.</p>
+            </article>
+            <article class="feature-item">
+              <h3>LuCI and modem controls</h3>
+              <p>LuCI, the HH71VM theme, and modem-control pages are included in the port.</p>
+            </article>
+            <article class="feature-item">
+              <h3>SMS support</h3>
+              <p>Reading and handling SMS is implemented and supported in the reference setup.</p>
+            </article>
+            <article class="feature-item">
+              <h3>sysupgrade / rollback</h3>
+              <p>Firmware updates and rollback to a saved stock backup are part of the documented workflow.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="hardware" class="section">
+        <div class="container narrow">
+          <div class="section-header">
+            <p class="eyebrow">Hardware</p>
+            <h2>Reference hardware and compatibility</h2>
+          </div>
+          <p>
+            The project’s reference hardware is the Alcatel LINKHUB HH71VM with the Realtek side
+            based on <strong>RTL8197FS</strong> and the 5 GHz radio based on
+            <strong>RTL8812FE</strong>. The port was developed and verified on one physical
+            HH71VM, and the repository explicitly states that other HH71VM board revisions,
+            regional variants, and carrier variants remain unverified.
+          </p>
+          <p>
+            Before installing, read the current <a href="https://github.com/sowarden/hh71vm-openwrt/blob/main/docs/known-issues.md" target="_blank" rel="noreferrer">known issues</a> and treat compatibility reports as hardware-specific evidence rather than guaranteed support for every unit.
+          </p>
+        </div>
+      </section>
+
+      <section id="install" class="section section-alt">
+        <div class="container">
+          <div class="section-header">
+            <p class="eyebrow">Get started</p>
+            <h2>OpenWrt installation and project links</h2>
+          </div>
+          <div class="cards">
+            <a class="card" href="https://github.com/sowarden/hh71vm-openwrt/releases/latest/download/hh71vm-openwrt-flash-bundle.zip" target="_blank" rel="noreferrer">
+              <span class="card-label">Download firmware</span>
+              <strong>Download HH71VM OpenWrt firmware</strong>
+              <small>Latest production flash bundle</small>
+            </a>
+            <a class="card" href="https://github.com/sowarden/hh71vm-openwrt/blob/main/docs/flash-install.md" target="_blank" rel="noreferrer">
+              <span class="card-label">Install</span>
+              <strong>HH71VM OpenWrt installation guide</strong>
+              <small>Permanent install steps and recovery notes</small>
+            </a>
+            <a class="card" href="https://github.com/sowarden/hh71vm-openwrt/blob/main/docs/known-issues.md" target="_blank" rel="noreferrer">
+              <span class="card-label">Known issues</span>
+              <strong>View current HH71VM known issues</strong>
+              <small>Compatibility and limitation notes</small>
+            </a>
+            <a class="card" href="https://github.com/sowarden/hh71vm-openwrt/blob/main/docs/sources.md" target="_blank" rel="noreferrer">
+              <span class="card-label">Build from source</span>
+              <strong>Build HH71VM OpenWrt from source</strong>
+              <small>Source provenance and rebuild instructions</small>
+            </a>
+            <a class="card" href="https://github.com/sowarden/hh71vm-openwrt/releases" target="_blank" rel="noreferrer">
+              <span class="card-label">Releases</span>
+              <strong>HH71VM OpenWrt releases</strong>
+              <small>Immutable firmware and source assets</small>
+            </a>
+            <a class="card" href="https://github.com/sowarden/hh71vm-openwrt" target="_blank" rel="noreferrer">
+              <span class="card-label">Repository</span>
+              <strong>Open the HH71VM GitHub repository</strong>
+              <small>Source, issues, downloads, and project docs</small>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section warning-section">
+        <div class="container narrow warning-box">
+          <div class="section-header">
+            <p class="eyebrow">Installation safety</p>
+            <h2>Read the full installation guide before flashing</h2>
+          </div>
+          <p>
+            This is firmware flashing, and the project documentation strongly recommends taking a
+            stock backup before installation. The installer reads the original flash contents of
+            the router and saves them so the stock firmware can be restored; a donor image from a
+            different HH71VM is not a safe substitute for recovery.
+          </p>
+          <p>
+            Follow the complete guide in the project repository before continuing: <a href="https://github.com/sowarden/hh71vm-openwrt/blob/main/docs/flash-install.md" target="_blank" rel="noreferrer">HH71VM OpenWrt flash installation guide</a>.
+          </p>
+        </div>
+      </section>
+
+      <section id="docs" class="section">
+        <div class="container narrow">
+          <div class="section-header">
+            <p class="eyebrow">FAQ</p>
+            <h2>Common questions from HH71VM owners</h2>
+          </div>
+          <div class="faq-list">
+            <details open>
+              <summary>Does OpenWrt support the Alcatel LINKHUB HH71VM?</summary>
+              <p>Yes. This repository publishes an OpenWrt port for the Realtek subsystem of the Alcatel LINKHUB HH71VM and documents the supported flash-install workflow.</p>
+            </details>
+            <details>
+              <summary>Does the HH71VM mobile modem work with OpenWrt?</summary>
+              <p>The Qualcomm modem subsystem remains separate from the Realtek side, and the port integrates with it for mobile Internet, modem control, and SMS support on the reference device.</p>
+            </details>
+            <details>
+              <summary>Can OpenWrt be installed permanently on the HH71VM?</summary>
+              <p>Yes. The supported deployment is a permanent installation into the Realtek SPI flash, and the router then boots OpenWrt on its own with settings preserved across power cycles.</p>
+            </details>
+            <details>
+              <summary>Can the stock HH71VM firmware be restored?</summary>
+              <p>Yes, by taking your own stock backup before installation and using the documented rollback path. The repository explicitly warns against using a Realtek dump from another HH71VM for recovery.</p>
+            </details>
+            <details>
+              <summary>Which Wi‑Fi chipsets are used by the supported HH71VM?</summary>
+              <p>The reference hardware uses the Realtek <strong>RTL8197FS</strong> radio for 2.4 GHz and <strong>RTL8812FE</strong> for 5 GHz.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section id="project" class="section section-alt">
+        <div class="container narrow">
+          <div class="section-header">
+            <p class="eyebrow">Project</p>
+            <h2>Open-source work for the HH71VM community</h2>
+          </div>
+          <p>
+            This is an open-source project focused on the HH71VM router’s Realtek subsystem and the
+            supporting hardware, firmware, modem integration, and documentation around it. The
+            primary public project home is the GitHub repository, which also hosts the releases,
+            installation guide, known-issue notes, and source/build documentation.
+          </p>
+          <div class="inline-links">
+            <a href="https://github.com/sowarden/hh71vm-openwrt" target="_blank" rel="noreferrer">GitHub repository</a>
+            <a href="https://github.com/sowarden/hh71vm-openwrt/issues" target="_blank" rel="noreferrer">Issues</a>
+            <a href="https://github.com/sowarden/hh71vm-openwrt/releases" target="_blank" rel="noreferrer">Releases</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>HH71VM Project</span>
+        <a href="https://github.com/sowarden/hh71vm-openwrt" target="_blank" rel="noreferrer">GitHub repository</a>
+        <span>Open-source firmware and documentation for the Alcatel LINKHUB HH71VM.</span>
+      </div>
+    </footer>
+  </body>
+</html>

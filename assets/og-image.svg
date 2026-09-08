@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">HH71VM Project</title>
+  <desc id="desc">OpenWrt for Alcatel LINKHUB HH71VM</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#101d32"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1">
+      <stop offset="0%" stop-color="#67e8f9"/>
+      <stop offset="100%" stop-color="#3dd9ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="120" y="120" width="960" height="390" rx="28" fill="#0e1a2b" stroke="#25395f"/>
+  <circle cx="240" cy="220" r="70" fill="none" stroke="url(#accent)" stroke-width="14"/>
+  <path d="M240 150v140M170 220h140M198 188l84 64M282 188l-84 64" stroke="#edf2ff" stroke-width="12" stroke-linecap="round" opacity="0.9"/>
+  <text x="390" y="245" fill="#edf2ff" font-family="system-ui, sans-serif" font-size="54" font-weight="700">HH71VM Project</text>
+  <text x="390" y="326" fill="#a9b7d0" font-family="system-ui, sans-serif" font-size="34">OpenWrt for Alcatel LINKHUB HH71VM</text>
+  <rect x="390" y="370" width="250" height="52" rx="12" fill="url(#accent)"/>
+  <text x="515" y="406" text-anchor="middle" fill="#051827" font-family="system-ui, sans-serif" font-size="26" font-weight="700">GitHub</text>
+</svg>
