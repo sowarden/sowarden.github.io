@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sowarden.github.io/sitemap.xml
