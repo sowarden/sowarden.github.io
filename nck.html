@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NCK Code Generator for Alcatel LINKHUB HH71VM | HH71VM Project</title>
+    <meta
+      name="description"
+      content="Free NCK unlock code generator for the Alcatel LINKHUB HH71VM. Enter the 15-digit IMEI to get the network unlock code and every facility code, calculated entirely in your browser. Verified on the HH71VM only."
+    >
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://sowarden.github.io/nck.html">
+    <meta property="og:title" content="NCK Code Generator for Alcatel LINKHUB HH71VM">
+    <meta
+      property="og:description"
+      content="Calculate the NCK network unlock code and all facility codes for the Alcatel LINKHUB HH71VM from the IMEI alone. Nothing is uploaded. Verified on the HH71VM only."
+    >
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sowarden.github.io/nck.html">
+    <meta property="og:site_name" content="HH71VM Project">
+    <meta property="og:image" content="https://sowarden.github.io/og-image.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="HH71VM Project - OpenWrt for Alcatel LINKHUB HH71VM">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="NCK Code Generator for Alcatel LINKHUB HH71VM | HH71VM Project">
+    <meta
+      name="twitter:description"
+      content="Enter a 15-digit IMEI and get the NCK network unlock code plus every facility code, computed in your browser."
+    >
+    <meta name="twitter:image" content="https://sowarden.github.io/og-image.png">
+    <meta name="twitter:image:alt" content="HH71VM Project - OpenWrt for Alcatel LINKHUB HH71VM">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" sizes="any">
+    <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#48DDF8">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#081321">
+    <link rel="stylesheet" href="styles.css">
+    <script src="nck.js" defer></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "name": "NCK Code Generator for Alcatel LINKHUB HH71VM",
+          "url": "https://sowarden.github.io/nck.html",
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "Any browser",
+          "browserRequirements": "Requires JavaScript",
+          "description": "Calculates the NCK network unlock code and all facility codes for the Alcatel LINKHUB HH71VM from the 15-digit IMEI, entirely client-side. Verified on the HH71VM only.",
+          "isAccessibleForFree": true,
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "isPartOf": {
+            "@type": "WebSite",
+            "url": "https://sowarden.github.io/",
+            "name": "HH71VM Project"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is an NCK code?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "NCK stands for Network Control Key. It is the code a network-locked modem asks for to release the carrier lock, so the device accepts SIM cards from other operators."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is my IMEI sent anywhere?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. The calculation runs in your browser in JavaScript. The page makes no network request with your IMEI, stores nothing, and works offline once loaded."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do I enter 10 digits or 16?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "It depends on the device. Some devices accept the 10-digit code; others accept the full 16 digits, which is the 10-digit code with the six-digit control value appended. There is no reliable way to tell in advance which form a particular unit expects."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Which of the seven codes should I use?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "For a carrier-locked modem the NCK is the one you want. The others correspond to the remaining 3GPP personalisation categories and are only needed if the device asks for that specific facility."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How many attempts does the modem allow?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The unlock attempt counter is real and usually allows fewer than ten tries before the personalisation locks permanently. Check the IMEI against the label before generating a code, and note that a correct code in the form your firmware does not expect is rejected like any other wrong code and spends an attempt."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does this need a dongle, credit or an online database?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. The code depends on nothing but the IMEI and the facility index. There is no key material, no smartcard and no server lookup involved."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="HH71VM Project home"><img class="brand-mark" src="favicon.svg" alt="" width="34" height="34">HH71VM Project</a>
+        <nav class="site-nav" aria-label="Main navigation">
+          <a href="index.html#overview">Overview</a>
+          <a href="index.html#status">Features / Status</a>
+          <a href="index.html#install">Installation</a>
+          <a href="index.html#docs">Documentation</a>
+          <a href="nck.html" aria-current="page">NCK Generator</a>
+          <a href="index.html#project">GitHub</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero tool-hero">
+        <div class="container narrow">
+          <p class="eyebrow">Unlock code calculator</p>
+          <h1 class="tool-title">NCK code generator</h1>
+          <p class="lede">
+            Enter the 15-digit IMEI of an <strong>Alcatel LINKHUB HH71VM</strong> and get its
+            <strong>NCK</strong> network unlock code, together with every other facility code the
+            vendor tool produces. Other models that use the same algorithm may work, but nothing
+            outside the HH71VM has been verified — use this at your own risk, and read the warning
+            below before you enter anything into a device.
+          </p>
+          <ul class="tool-points">
+            <li>Runs entirely in your browser; the IMEI never leaves this page.</li>
+            <li>Free and unlimited, with no trial counter.</li>
+            <li>Both the 16-digit and 10-digit forms, for every facility.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="generator" class="section section-alt">
+        <div class="container narrow">
+          <div class="tool-card">
+            <form id="nck-form" novalidate>
+              <div class="field-block">
+                <label class="field-label" for="imei">Modem IMEI</label>
+                <div class="field">
+                  <input
+                    id="imei"
+                    name="imei"
+                    type="text"
+                    inputmode="numeric"
+                    autocomplete="off"
+                    autocorrect="off"
+                    autocapitalize="off"
+                    spellcheck="false"
+                    maxlength="32"
+                    placeholder="012345678901234"
+                    aria-describedby="imei-hint"
+                  >
+                  <span id="imei-counter" class="field-counter" aria-hidden="true">0 / 15</span>
+                </div>
+                <p id="imei-hint" class="field-hint">15 digits. Printed on the label under the router.</p>
+                <p id="imei-error" class="field-error" role="alert" hidden></p>
+              </div>
+
+              <div class="tool-actions">
+                <button type="submit" class="button primary">Generate codes</button>
+                <button type="button" id="nck-reset" class="button secondary">Clear</button>
+              </div>
+            </form>
+          </div>
+
+          <div id="nck-results" class="results" hidden>
+            <div class="result-primary">
+              <div class="result-primary-head">
+                <span class="card-label">Network unlock code — NCK</span>
+                <span class="result-imei">IMEI <span id="nck-echo"></span></span>
+              </div>
+
+              <div class="code-option">
+                <div class="code-option-head">
+                  <span class="code-option-name">Full code · 16 digits</span>
+                </div>
+                <div class="code-option-body">
+                  <code id="nck-primary-full" class="result-code"></code>
+                  <button type="button" id="nck-copy-full" class="button primary">Copy</button>
+                </div>
+              </div>
+
+              <div class="code-option">
+                <div class="code-option-head">
+                  <span class="code-option-name">Short code · 10 digits</span>
+                </div>
+                <div class="code-option-body">
+                  <code id="nck-primary-code" class="result-code result-code-sm"></code>
+                  <button type="button" id="nck-primary-copy" class="button secondary">Copy</button>
+                </div>
+              </div>
+
+              <p class="result-meta">
+                The full code is just the short code with the control value
+                <code id="nck-primary-control" class="code-control"></code> appended — the six
+                digits the vendor tool prints in parentheses. Both forms come from the same
+                calculation; the difference is only how much of it the firmware asks for.
+              </p>
+            </div>
+
+            <div class="region-note">
+              <h2 class="region-note-title">10 digits or 16?</h2>
+              <p>
+                Some devices accept the 10-digit code; others accept the full 16 digits. There is
+                no reliable way to tell in advance which form your unit expects, and unlock
+                attempts are limited, so read the warning below before entering either.
+              </p>
+            </div>
+
+            <h2 class="results-heading">All facility codes</h2>
+            <div class="table-wrap">
+              <table class="code-table">
+                <caption class="sr-only">Unlock codes for each personalisation facility, derived from the entered IMEI, in both the 16-digit and 10-digit forms</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Facility</th>
+                    <th scope="col">Full code <span class="th-note">16 digits</span></th>
+                    <th scope="col">Short code <span class="th-note">10 digits</span></th>
+                  </tr>
+                </thead>
+                <tbody id="nck-tbody"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <p id="nck-status" class="sr-only" role="status" aria-live="polite"></p>
+
+          <noscript>
+            <p class="inline-notice">
+              This calculator runs in the browser, so JavaScript needs to be enabled. Nothing is
+              uploaded either way.
+            </p>
+          </noscript>
+        </div>
+      </section>
+
+      <section class="section warning-section">
+        <div class="container narrow warning-box">
+          <div class="section-header">
+            <p class="eyebrow">Before you enter it</p>
+            <h2>The attempt counter is real — make the first try count</h2>
+          </div>
+          <p>
+            The modem counts failed unlock attempts, and the limit is small. When the counter runs
+            out the personalisation locks permanently and no code will open it again. The one you
+            want is the <strong>NCK</strong>; the other facilities are only for a device that
+            explicitly asks for them.
+          </p>
+          <p>
+            Read the IMEI back digit by digit against the label before you generate anything — one
+            wrong digit produces a completely different code. And note that the 16-digit and
+            10-digit forms are not interchangeable: a correct code in the form your firmware does
+            not expect is rejected like any other wrong code, and spends an attempt doing it.
+          </p>
+          <p>
+            Use this on hardware you own. Unlocking a device someone else is still paying for, or
+            that is subject to a contract you have not settled, may breach that agreement — the
+            calculator makes no judgement about which case you are in.
+          </p>
+        </div>
+      </section>
+
+      <section id="how" class="section">
+        <div class="container">
+          <div class="section-header">
+            <p class="eyebrow">How it works</p>
+            <h2>One SHA-1 hash over the IMEI</h2>
+          </div>
+          <div class="feature-grid">
+            <article class="feature-item">
+              <h3>1. Pack the IMEI</h3>
+              <p>The 15 digits, with one leading zero, are packed two per byte as BCD, giving an 8-byte block.</p>
+            </article>
+            <article class="feature-item">
+              <h3>2. Build the message</h3>
+              <p>Three copies of that block, separated by two 4-byte tags whose low byte selects the facility — 32 bytes in all.</p>
+            </article>
+            <article class="feature-item">
+              <h3>3. Hash it</h3>
+              <p>A single plain, unkeyed SHA-1 pass over those 32 bytes produces a 20-byte digest.</p>
+            </article>
+            <article class="feature-item">
+              <h3>4. Fold to digits</h3>
+              <p>Each of the first 16 digest bytes becomes one decimal digit: its two nibbles XORed, modulo 10.</p>
+            </article>
+          </div>
+
+          <div class="how-notes">
+            <p>
+              That is the whole calculation. Nothing else feeds it: not the model profile, not a
+              smartcard, not any vendor key material, and not a server. The progress dialog in the
+              commercial tool that reads <em>“Searching Base… (About 30 sec.)”</em> is decoration
+              around one hash.
+            </p>
+            <p>
+              Those sixteen folded digits <em>are</em> the code. The vendor tool presents them split
+              — ten digits, then the remaining six in parentheses as a “control value” — but that
+              split is a display convention, not a boundary in the maths. At least some firmware
+              wants all sixteen entered as a single string, which is why this page hands you both
+              forms rather than assuming one.
+            </p>
+            <p>
+              The check digit is not part of the calculation. The vendor tool never validates it
+              either, so an IMEI whose check digit does not match still yields the same codes as
+              the digits entered.
+            </p>
+
+            <details class="how-details">
+              <summary>Worked example and self-test</summary>
+              <p>
+                Synthetic IMEI <code>012345678901234</code>, facility NCK. The message is the BCD
+                block, tag <code>C0</code>, the block again, tag <code>CD</code>, and the block once
+                more:
+              </p>
+              <pre class="code-block"><code>BCD      00 12 34 56 78 90 12 34
+message  0012345678901234 c0000000 0012345678901234 cd000000 0012345678901234
+SHA-1    9f30457f 2d72846f 6cafb5f8 d52aa2ed 299974df
+fold     9f-&gt;6  30-&gt;3  45-&gt;1  7f-&gt;8  2d-&gt;5  72-&gt;5  84-&gt;2  6f-&gt;9
+         6c-&gt;0  af-&gt;5  b5-&gt;4  f8-&gt;7  d5-&gt;8  2a-&gt;8  a2-&gt;8  ed-&gt;3
+digits   6318552905478883        &lt;- the full 16-digit code
+result   6318552905 (478883)     &lt;- as the vendor tool displays it</code></pre>
+              <p>
+                Entering that IMEI above should reproduce the full set exactly. If it does, the
+                calculator on this page is behaving:
+              </p>
+              <pre class="code-block"><code>NCK     6318552905 (478883)
+NSCK    8532047882 (407823)
+SPCK    0942002456 (328911)
+SIM     1523150021 (542477)
+C       0536453544 (527474)
+Other   9308353322 (504072)
+T6      4862357454 (041781)</code></pre>
+              <p>
+                The facility tags are <code>C0 CD</code> for NCK, <code>52 C7</code> for NSCK,
+                <code>80 44</code> for SPCK, <code>FD BE</code> for SIM, <code>43 7B</code> for C,
+                <code>6D 38</code> for Other and <code>90 90</code> for the seventh entry. Only those
+                two bytes differ between facilities.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section id="compat" class="section section-alt">
+        <div class="container narrow">
+          <div class="section-header">
+            <p class="eyebrow">Coverage</p>
+            <h2>Which devices this covers</h2>
+          </div>
+          <p>
+            The algorithm was recovered on the Alcatel LINKHUB <strong>HH71VM</strong>, the router
+            this project ports OpenWrt to, and that is the only device on which it is verified. One
+            HH71VM has been unlocked on real hardware with a code from this calculation.
+          </p>
+          <p>
+            Other devices that use the same algorithm may work, but we have not verified any of
+            them and we do not recommend using this on them. Nothing here is a universal unlocker:
+            other vendors use unrelated schemes, and a code from this page will simply be rejected
+            by a device outside this family — spending an attempt to find that out. If your device
+            is not an HH71VM, treat everything this page produces as unverified.
+          </p>
+          <div class="inline-links">
+            <a href="index.html">HH71VM OpenWrt port</a>
+            <a href="https://github.com/sowarden/hh71vm-openwrt" target="_blank" rel="noreferrer">GitHub repository</a>
+            <a href="https://github.com/sowarden/hh71vm-nck-gen" target="_blank" rel="noreferrer">NCK generator script</a>
+            <a href="https://github.com/sowarden/hh71vm-openwrt/issues" target="_blank" rel="noreferrer">Report a result</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="nck-faq" class="section">
+        <div class="container narrow">
+          <div class="section-header">
+            <p class="eyebrow">FAQ</p>
+            <h2>Questions about unlock codes</h2>
+          </div>
+          <div class="faq-list">
+            <details open>
+              <summary>What is an NCK code?</summary>
+              <p>
+                NCK stands for Network Control Key. It is the code a network-locked modem asks for to
+                release the carrier lock, so the device accepts SIM cards from other operators.
+              </p>
+            </details>
+            <details>
+              <summary>Is my IMEI sent anywhere?</summary>
+              <p>
+                No. The calculation runs in your browser, in <a href="nck.js">nck.js</a> — which you
+                can read. The page makes no network request with your IMEI, saves nothing, and keeps
+                working with the connection turned off once it has loaded.
+              </p>
+            </details>
+            <details>
+              <summary>Which of the seven codes should I use?</summary>
+              <p>
+                For a carrier-locked modem, the <strong>NCK</strong>. The others cover the remaining
+                3GPP personalisation categories — network subset, service provider, corporate and
+                SIM/USIM — and are only needed when the device explicitly asks for that facility. The
+                seventh entry, shown as T6, exists in the vendor code and produces a well-formed pair,
+                but the vendor interface never displays it and what it unlocks is unidentified.
+              </p>
+            </details>
+            <details>
+              <summary>Do I enter 10 digits or 16?</summary>
+              <p>
+                It depends on the device. Some devices accept the 10-digit code; others accept the
+                full 16 digits — the short code with the control value appended. There is no
+                reliable way to tell in advance which form your unit expects.
+              </p>
+            </details>
+            <details>
+              <summary>What is the control value in parentheses?</summary>
+              <p>
+                The last six of the sixteen digits the calculation produces. The vendor tool prints
+                it in parentheses, which makes it look like a separate cross-check value — but the
+                split is only a display convention. On firmware that expects the long form, those
+                six digits are simply the tail of the code you type in.
+              </p>
+            </details>
+            <details>
+              <summary>How many attempts does the modem allow?</summary>
+              <p>
+                Fewer than you would like — typically under ten, and the counter does not reset. Once
+                it is exhausted the personalisation is permanently locked and no code, from this page
+                or anywhere else, will open it. Enter one code, carefully.
+              </p>
+            </details>
+            <details>
+              <summary>Does this need a dongle, credit or an online database?</summary>
+              <p>
+                No. The code depends on nothing but the IMEI and the facility index. No key material,
+                no smartcard, no per-code payment and no server lookup are involved, which is why this
+                page can be free and unlimited.
+              </p>
+            </details>
+            <details>
+              <summary>The code was rejected. What now?</summary>
+              <p>
+                Check the IMEI digit by digit first — off the label, not from memory — because one
+                wrong digit produces an unrelated code. Bear in mind too that a correct code in the
+                form your firmware does not expect fails exactly like a wrong one. If the IMEI is
+                right, the device most likely does not use this unlock profile at all, and further
+                attempts will only spend the counter.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>HH71VM Project</span>
+        <a href="https://github.com/sowarden/hh71vm-openwrt" target="_blank" rel="noreferrer">GitHub repository</a>
+        <span>Open-source firmware and documentation for the Alcatel LINKHUB HH71VM.</span>
+      </div>
+    </footer>
+  </body>
+</html>

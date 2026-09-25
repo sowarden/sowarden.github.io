@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-label="HH71 project icon">
+<title>HH71 project icon</title><defs>
+  <linearGradient id="bgGrad" x1="0" y1="0" x2="0.88" y2="1">
+    <stop offset="0" stop-color="#0E3152"/>
+    <stop offset="0.52" stop-color="#08233C"/>
+    <stop offset="1" stop-color="#03172D"/>
+  </linearGradient>
+  <radialGradient id="bgGlow" cx="0.18" cy="0.08" r="0.95">
+    <stop offset="0" stop-color="#2D78A8" stop-opacity="0.16"/>
+    <stop offset="0.55" stop-color="#0F4B72" stop-opacity="0.04"/>
+    <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="borderGrad" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#4AA6D9" stop-opacity="0.65"/>
+    <stop offset="0.5" stop-color="#176A98" stop-opacity="0.58"/>
+    <stop offset="1" stop-color="#0A4D78" stop-opacity="0.72"/>
+  </linearGradient>
+  <linearGradient id="whiteGrad" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#FFFFFF"/>
+    <stop offset="0.52" stop-color="#F3F7FD"/>
+    <stop offset="1" stop-color="#D9E7FA"/>
+  </linearGradient>
+  <linearGradient id="cyanGrad" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#7CEAFE"/>
+    <stop offset="0.46" stop-color="#3BD6F8"/>
+    <stop offset="1" stop-color="#05B6F3"/>
+  </linearGradient>
+  <filter id="markShadow" x="-20%" y="-20%" width="140%" height="160%">
+    <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000814" flood-opacity="0.24"/>
+  </filter>
+  <filter id="cardShadow" x="-20%" y="-20%" width="140%" height="160%">
+    <feDropShadow dx="0" dy="16" stdDeviation="28" flood-color="#000711" flood-opacity="0.30"/>
+  </filter>
+</defs><rect x="2" y="2" width="1020" height="1020" rx="208" fill="url(#bgGrad)"/><rect x="2" y="2" width="1020" height="1020" rx="208" fill="url(#bgGlow)"/><rect x="5" y="5" width="1014" height="1014" rx="205" fill="none" stroke="url(#borderGrad)" stroke-width="6"/><path d="M399 587C399 751 484 824 606 824C729 824 800 749 800 607V0H1094V661C1094 928 949 1078 724 1078C575 1078 470 1013 399 897V1490H104V0H399Z" transform="matrix(0.21136107 0 0 -0.21744966 76.699 670.000)" fill="#F4F7FD"/><path d="M399 587C399 751 484 824 606 824C729 824 800 749 800 607V0H1094V661C1094 928 949 1078 724 1078C575 1078 470 1013 399 897V1490H104V0H399Z" transform="matrix(0.21136107 0 0 -0.21744966 307.947 670.000)" fill="#F4F7FD"/><path d="M147 0H459L1082 1237V1490H45V1234H772V1232Z" transform="matrix(0.21136107 0 0 -0.21744966 547.665 670.000)" fill="#48DDF8"/><path d="M687 1490H408L39 1255V985L389 1207H391V0H687Z" transform="matrix(0.21136107 0 0 -0.21744966 780.114 670.000)" fill="#48DDF8"/></svg>
